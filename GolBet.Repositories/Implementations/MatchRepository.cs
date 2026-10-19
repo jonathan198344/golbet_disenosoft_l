@@ -3,11 +3,13 @@
 using GolBet.Entities;
 using GolBet.Entities.Enums;
 using GolBet.Repositories.Data;
+
+
 using Microsoft.EntityFrameworkCore;
 
 namespace GolBet.Repositories.Implementations;
 
-public class MatchRepository : GenericRepository<Match>, IMatchRepository
+public class MatchRepository : GenericRepository<Match>, Interfaces.IMatchRepository
 {
     public MatchRepository(AppDbContext context) : base(context) { }
 
