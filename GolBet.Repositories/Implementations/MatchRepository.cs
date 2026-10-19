@@ -3,8 +3,6 @@
 using GolBet.Entities;
 using GolBet.Entities.Enums;
 using GolBet.Repositories.Data;
-using GolBet.Repositories.Data.Interfaces;
-using GolBet.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace GolBet.Repositories.Implementations;
