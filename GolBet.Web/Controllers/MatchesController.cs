@@ -38,8 +38,8 @@ public class MatchesController : Controller
 
         return View(match);
     }
-        // GET /Matches/Create
-public async Task<IActionResult> Create()
+    // GET /Matches/Create
+    public async Task<IActionResult> Create()
     {
         await LoadTeamsAsync();
         return View(new MatchFormDto());
@@ -77,8 +77,5 @@ public async Task<IActionResult> Create()
         var teams = await _teamService.GetAllAsync();
         ViewBag.Teams = new SelectList(teams, "Id", "Name");
     }
-
 }
-
-
 
