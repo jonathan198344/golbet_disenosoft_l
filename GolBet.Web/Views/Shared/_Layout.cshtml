@@ -28,10 +28,13 @@
                             <a class="nav-link" asp-controller="Matches" asp-action="Index">Partidos</a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Teams" asp-action="Index">Equipos</a>
-                        </li>
-                    </ul>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Teams" asp-action="Index">Equipos</a>
+                            </li>
+                        }
+
 
                         <partial name="_LoginPartial" />
                 </div>
